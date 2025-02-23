@@ -7,6 +7,8 @@
   --white-bg-color: rgb(255, 255, 255);
   --blue-text-color: #003F67;
   --blue-text-color-hover:#00406710;
+  --description-text-color:rgb(97, 112, 126);
+  --heading-text-color:rgb(118, 116, 122);
 }
 
 /*
@@ -20,7 +22,15 @@
 
 /*
 
----break--- */
+/* Hide vertical scrollbar */
+/* Hide both vertical and horizontal scrollbars */
+
+
+::-webkit-scrollbar {
+  display: none; /* Hide scrollbar in Chrome, Safari, Edge */
+}
+
+
 
 @layer base {
   :root {
