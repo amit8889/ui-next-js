@@ -2,18 +2,16 @@
 import { useState } from "react";
 import { FaPhoneAlt, FaBars, FaTimes } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import Image from "next/image";
 import Link from "next/link";
-import { IoClose } from "react-icons/io5";
-
+import Image from "next/image";
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [topContatBar, setTopContactBar] = useState(true);
+  // const [topContatBar, setTopContactBar] = useState(true);
 
   return (
     <div className="sticky top-0 w-full  shadow-md z-50">
       {/* Top Contact Bar */}
-      {topContatBar && (
+      {
         <div
           className="py-5 px-5 text-[var(--white-text-color)] flex flex-wrap justify-between items-center mx-auto sm:px-6 md:px-16 lg:px-32"
           style={{
@@ -33,7 +31,7 @@ const Header = () => {
           {/* Quote & Admission Button */}
           <div className="hidden sm:flex items-center gap-4 md:gap-8 ">
             <h4 className=" hidden md:flex text-sm md:text-lg font-semibold  text-center">
-              "Shaping Young Minds Today for a Better Tomorrow."
+              {`"Shaping Young Minds Today for a Better Tomorrow."`}
             </h4>
             <button className="px-4 md:px-8 py-2 text-sm md:text-base bg-[var(--white-bg-color)] font-normal rounded-md text-[var(--blue-text-color)] transition duration-200 hover:bg-slate-200 hover:text-black border-2 border-transparent hover:border-teal-500">
               Admission - 2025
@@ -46,7 +44,7 @@ const Header = () => {
             <IoClose className="text-gray-600 w-6 h-6" />
           </button> */}
         </div>
-      )}
+      }
 
       {/* Navigation Bar */}
       <nav className="bg-[var(--white-bg-color)] shadow-md">
@@ -54,7 +52,7 @@ const Header = () => {
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
             <Link href="/">
-              <img
+              <Image
                 alt="Gurukulam Logo"
                 loading="lazy"
                 width={150}
