@@ -9,7 +9,7 @@ const Header = () => {
   // const [topContatBar, setTopContactBar] = useState(true);
 
   return (
-    <div className="sticky top-0 w-full  shadow-md z-50">
+    <div className="sticky top-0 w-full  shadow-md z-[500000]">
       {/* Top Contact Bar */}
       {
         <div
@@ -91,7 +91,13 @@ const Header = () => {
                 href="/contact"
                 className="sm:hover:bg-[var(--blue-text-color-hover)] hover:border-b-[1.5px] hover:border-[[var(--blue-text-color)]] py-4 px-1"
               >
-                Contact
+                contact
+              </Link>
+              <Link
+                href="/gallery"
+                className="sm:hover:bg-[var(--blue-text-color-hover)] hover:border-b-[1.5px] hover:border-[[var(--blue-text-color)]] py-4 px-1"
+              >
+                Gallery
               </Link>
             </div>
 
