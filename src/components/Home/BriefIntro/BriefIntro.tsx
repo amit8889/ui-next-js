@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { BackgroundBeamsWithCollision } from "../../ui/background-beams-with-collision";
+import { Compare } from "@/components/ui/compare";
 const BriefIntro = () => {
   const items = [
     {
@@ -23,30 +24,41 @@ const BriefIntro = () => {
   ];
 
   return (
-    <div className="relative w-full mx-auto sm:px-6 md:px-12 lg:px-20">
+    <div className="relative w-full mx-auto  sm:mt-8 md:mt-12 sm:px-6 md:px-12 lg:px-20 ">
       {items.map((item, index) => (
         <div
           key={index}
-          className={`flex flex-col md:flex-row items-center justify-between gap-6 p-4 sm:p-6 mx-auto ${
-            item.align === "left" ? "md:flex-row" : "md:flex-row-reverse"
+          className={`flex flex-col lg:flex-row items-center justify-between gap-6 mx-0 lg:mx-14 sm:mt-8 md:mt-12 sm:md-0 lg:p-4 sm:p-6 ${
+            item.align === "left" ? "lg:flex-row" : "lg:flex-row-reverse"
           }`}
         >
           {/* Image Box */}
-          <div className="relative flex m-10 items-center justify-center w-full sm:w-4/5 md:w-1/2 h-[200px] sm:h-[300px] md:h-[350px] overflow-hidden rounded-lg">
-            <div className="max-w-[400px] min-h-[300px] px-6">
-              <Image
+
+          <div className="relative border rounded-3xl flex m-10 items-center justify-center w-full sm:w-4/5 lg:w-1/2 h-[200px] sm:h-[300px] lg:h-[350px] overflow-hidden ">
+            {/* <div className="max-w-[400px] min-h-[300px] px-6"> */}
+            <Compare
+              firstImage={item.image}
+              secondImage={
+                "https://www.thegurukulam.school/_next/image?url=https%3A%2F%2Fstatic.pw.live%2Fproduction-gurukulam%2Fstatic%2Fimages%2Flanding-page%2FDSC01095.JPG&w=640&q=75"
+              }
+              initialSliderPercentage={20}
+              className="min-h-[300px] min-w-[900px]"
+              autoplay={true}
+              slideMode="hover"
+            />
+            {/* <Image
                 alt={item.title}
                 src={item.image}
                 fill
                 className="object-cover rounded-lg shadow-md"
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-              />
-            </div>
+              /> */}
+            {/* </div> */}
           </div>
 
           {/* Text Box */}
 
-          <div className="w-full sm:w-4/5 md:w-1/2 flex flex-col justify-start gap-4 text-center md:text-left">
+          <div className="w-full sm:w-4/5 md:w-2/2 lg:w-1/2 flex flex-col justify-start gap-4 text-center md:text-left">
             <BackgroundBeamsWithCollision>
               <div className="p-8 ">
                 <h2 className="text-[var(--heading-text-color)] text-lg sm:text-xl md:text-2xl font-bold">

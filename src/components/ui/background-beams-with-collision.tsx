@@ -64,13 +64,14 @@ export const BackgroundBeamsWithCollision = ({
       delay: 2,
       className: "h-6",
     },
+    
   ];
 
   return (
     <div
       ref={parentRef}
       className={cn(
-        " bg-gradient-to-b from-white to-neutral-100 dark:from-neutral-950 dark:to-neutral-800 relative flex items-center w-full justify-center overflow-hidden",
+        " bg-gradient-to-b  relative flex items-center w-full justify-center overflow-hidden",
         // h-screen if you want bigger
         className
       )}
@@ -167,11 +168,11 @@ const CollisionMechanism = React.forwardRef<
       setTimeout(() => {
         setCollision({ detected: false, coordinates: null });
         setCycleCollisionDetected(false);
-      }, 2000);
+      }, 1000);
 
       setTimeout(() => {
         setBeamKey((prevKey) => prevKey + 1);
-      }, 2000);
+      }, 1000);
     }
   }, [collision]);
 
